@@ -7,7 +7,7 @@ Determine if there is a relationship between student attendance, regents scores,
 
 ## Exploratory Data Analysis
 R^2 and p-values for each individual regent compared to graduation rate
-
+![alt text](https://github.com/gracejihaepark/hs_gradrate/blob/master/readme%20images/Screen%20Shot%202020-06-15%20at%204.21.25%20PM.png?raw=true)
 
 R^2 and p-values for attendance and staff qualifications compared to graduation rate
 
