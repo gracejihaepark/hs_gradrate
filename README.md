@@ -16,3 +16,7 @@ Determine if there is a relationship between student attendance, regents scores,
 ![alt text](https://github.com/gracejihaepark/hs_gradrate/blob/master/readme%20images/Screen%20Shot%202020-06-15%20at%204.21.25%20PM.png?raw=true)
 
 ## Model
+- Mutliple Regession for All Regents for feature engineering to choose the regents subjects that most affected graduation rates
+  - Alegbra, English, and US History and Government all had low p-values
+  - Ran a multiple regression for these three regents, which resulted in all three regents having a p-value of less than .01
+  - Checked normality and homoscedasticity
