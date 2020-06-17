@@ -25,7 +25,7 @@ Determine if there is a relationship between student attendance, regents scores,
 - Next, ran a multiple Regression for all independent variables, such as teacher qualifications, attendance, and the three regents from the first regression
   - Ran another multiple regression of variables with low p-values (percentage of teachers with no valid teaching certificate, attendance, US History and Government regents), which resulted in new p-values of under .01
   - Checked normality and homoscedasticity
-  ![alt text](https://github.com/gracejihaepark/hs_gradrate/blob/master/readme%20images/Screen%Shot%202020-06-17%at%202.47.46%AM.png?raw=true)
+  ![alt text](https://github.com/gracejihaepark/hs_gradrate/blob/master/readme%20images/Screen%20Shot%202020-06-17%20at%202.47.46%20AM.png?raw=true)
 
 ## Conclusions
 - Graduation rates can be predicted based on simple linear regression models for regent scores and attendance data
