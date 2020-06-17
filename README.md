@@ -16,7 +16,21 @@ Determine if there is a relationship between student attendance, regents scores,
 ![alt text](https://github.com/gracejihaepark/hs_gradrate/blob/master/readme%20images/Screen%20Shot%202020-06-15%20at%204.21.25%20PM.png?raw=true)
 
 ## Model
-- Mutliple Regession for All Regents for feature engineering to choose the regents subjects that most affected graduation rates
+- Ran a mutliple Regession for all regents for feature engineering to choose the regents subjects that most affected graduation rates
   - Alegbra, English, and US History and Government all had low p-values
   - Ran a multiple regression for these three regents, which resulted in all three regents having a p-value of less than .01
   - Checked normality and homoscedasticity
+  ![alt text](https://github.com/gracejihaepark/hs_gradrate/blob/master/readme%20images/Screen%20Shot%202020-06-17%20at%202.40.54%20AM.png?raw=true)
+
+- Next, ran a multiple Regression for all independent variables, such as teacher qualifications, attendance, and the three regents from the first regression
+  - Ran another multiple regression of variables with low p-values (percentage of teachers with no valid teaching certificate, attendance, US History and Government regents), which resulted in new p-values of under .01
+  - Checked normality and homoscedasticity
+  ![alt text](https://github.com/gracejihaepark/hs_gradrate/blob/master/readme%20images/Screen%Shot%202020-06-17%at%202.47.46%AM.png?raw=true)
+
+## Conclusions
+- Graduation rates can be predicted based on simple linear regression models for regent scores and attendance data
+- US History and Government regents, attendance rates, and percentage of teachers with no valid teaching certificate gave us the best model
+
+## Weaknesses and Future Work
+- Lost thousands of data points after merging all the data due to the different ways that same schools were named in different data sets
+- Would like to incorporate demographic data, English Language Learners (ELL) data, as well as special needs data to see if they have an effect as well
