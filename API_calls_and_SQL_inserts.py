@@ -18,9 +18,6 @@ cnx = mysql.connector.connect(
 cursor = cnx.cursor()
 
 
-
-
-
 # make API call for hs regents data
 client = Socrata("data.cityofnewyork.us", 'hs_key')
 client = Socrata('data.cityofnewyork.us',
@@ -42,8 +39,6 @@ gradrate = pd.DataFrame.from_records(results)
 
 
 
-
-
 # drop unwanted rows in dataframes; save as csv files
 regents = regents[~regents['school_level'].isin(['K-8', 'Elementary'])]
 regents.to_csv('regents.csv')
@@ -56,11 +51,6 @@ gradrate.to_csv('gradrate.csv')
 regents2017 = regents[regents['year'].isin(['2017'])]
 # take out rows with inappropriate school level
 regents2017 = regents2017[~regents2017.school_level.str.contains('Junior High-Intermediate-Middle')]
-# regentsdf = pd.DataFrame(regents2017.loc[:, ['school_name', 'regents_exam', 'demographic_variable', 'total_tested', 'mean_score', 'number_scoring_below_65', 'percent_scoring_below_65', 'number_scoring_65_or_above', 'percent_scoring_65_or_above', 'number_scoring_80_or_above', 'percent_scoring_80_or_above', 'number_scoring_cr', 'percent_scoring_cr']])
-# regents_tuples = list(regentsdf.itertuples(index=False, name=None))
-
-
-
 
 
 # load tuples
@@ -78,8 +68,6 @@ ydf = ydf.where((pd.notnull(ydf)), None)
 ydf
 # change back dataframe now updated with nones back to list of tuples
 y = list(ydf.itertuples(index=False, name=None))
-
-
 
 
 
@@ -112,8 +100,6 @@ for chunk in grad_chunks:
                          VALUES (%s, %s, %s, %s, %s, %s);""")
     cursor.executemany(insert_gradrate, chunk)
     cnx.commit()
-
-
 
 
 # create tuples long way
@@ -159,8 +145,6 @@ for chunk in regents_chunks:
                          VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s);""")
     cursor.executemany(insert_regents, chunk)
     cnx.commit()
-
-
 
 
 
